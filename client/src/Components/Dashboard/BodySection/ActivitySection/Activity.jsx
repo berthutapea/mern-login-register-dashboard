@@ -1,10 +1,6 @@
 import React from 'react'
 import './activity.css'
-
-// Imported Icons
 import { BsArrowRightShort } from 'react-icons/bs'
-
-// Imported Image
 import user from '../../../../Assets/aldi.jpg'
 import user1 from '../../../../Assets/dadang.jpg'
 import user2 from '../../../../Assets/gilbert.jpg'
