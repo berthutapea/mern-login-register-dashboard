@@ -1,11 +1,7 @@
 import React from 'react'
 import './listing.css'
-
-// Imported Icons
 import { BsArrowRightShort } from 'react-icons/bs'
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
-
-// Imported Images
 import img from '../../../../Assets/images (1).png'
 // import img1 from '../../../Assets/images (9).png'
 // import img2 from '../../../Assets/images (8).png'
