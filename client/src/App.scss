@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+// Let set up our default styling
+:root {
+    --primaryColor: hsl(94, 55%, 56%);
+    --hoverColor: hsl(93, 75%, 76%);
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --greyText: hsl(0, 0%, 75%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+
+    /* Font ang Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html {
+    font-size: 90%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.icon {
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img,
+video {
+    height: auto;
+    width: 100%;
+}
+
+.message {
+    display: none; //we shall how all this come to use, be pateint 
+}
+
+.showMessage {
+    display: block;
+    color: var(--whiteColor);
+    padding: 10px;
+    background: rgb(225, 0, 0);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.showMessage {
+    display: block;
+    color: var(--whiteColor);
+    background: rgb(255, 0, 0);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--greyText);
+}
+
+.btn .icon {
+    margin-left: .5rem;
+}
+
+.btn:hover {
+    color: var(--primaryColor);
+    background: var(--paleGreen);
+}
+
+// Pages stylings
+.loginPage,
+.registerPage {
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 7px 50px rgb(214, 223, 213);
+
+    .container {
+        height: 75vh;
+        width: 60%;
+        margin: auto;
+        justify-content: space-between;
+        border-radius: 10px;
+        background: hsl(0, 0%, 91%);
+
+        .videoDiv {
+            position: relative;
+            display: flex;
+            flex-basis: 50%;
+            width: 70%;
+            height: 100%;
+            padding: 0 1.5rem;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: auto;
+            border-radius: 10px;
+            overflow: hidden;
+
+            video,
+            .footerDiv {
+                position: absolute;
+            }
+
+            video {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+            }
+
+            .textDiv {
+                position: relative;
+
+                .title {
+                    color: var(--whiteColor);
+                    font-size: 35px;
+                    font-weight: 800;
+                }
+
+                p {
+                    color: var(--whiteColor);
+                    padding: 1rem;
+                    font-weight: 400;
+                }
+            }
+
+            .footerDiv {
+                bottom: 10px;
+                padding: 0 1rem;
+                height: 60px;
+                background: rgba(255, 255, 255, 0.248);
+                left: 10px;
+                right: 10px;
+                justify-content: space-between;
+                backdrop-filter: blur(1px);
+                border-radius: 10px;
+
+                .text {
+                    color: var(--whiteColor);
+                }
+
+                .btn {
+                    background: var(--whiteColor);
+                    color: var(--primaryColor);
+                    padding: .8rem 1.5rem;
+                    border-radius: 10px;
+                    font-weight: 400;
+                    transition: .3s ease;
+
+                    &:hover {
+                        background: var(--hoverColor);
+                        color: var(--blackColor);
+                    }
+                }
+            }
+
+        }
+
+        .formDiv {
+            flex-basis: 50%;
+            margin: auto;
+            flex-direction: column;
+            gap: 1.5rem;
+            transform: translateY(-1rem);
+
+            .headerDiv {
+                text-align: center;
+                padding: 1.5rem 0;
+
+                img {
+                    width: 60px;
+                    padding-bottom: .5rem;
+                }
+
+                h3 {
+                    font-size: 25px;
+                    color: var(--blackColor);
+                    font-weight: 600;
+                }
+            }
+
+            .form {
+                gap: 1rem;
+
+                .inputDiv {
+                    .icon {
+                        color: var(--greyText);
+                    }
+
+                    input {
+                        background: none;
+                        outline: none;
+                        border: none;
+                        width: 200px;
+                    }
+
+                    label {
+                        color: var(--blackColor);
+                        font-weight: 400;
+                        font-size: 14px;
+                        padding: .5rem 0;
+                        display: block;
+                    }
+
+                    .input {
+                        gap: .5rem;
+                        padding: 1rem;
+                        background: var(--inputColor);
+                        border-radius: 10px;
+                    }
+                }
+
+                .btn {
+                    padding: .8rem;
+                    background: var(--primaryColor);
+                    border-radius: 10px;
+                    color: var(--whiteColor);
+                    align-items: center;
+                    margin: auto;
+                    justify-content: center;
+                    font-size: 16px;
+                    width: 100%;
+                    gap: .5rem;
+                    transition: .3s ease;
+
+                    .icon {
+                        font-size: 25px;
+                        transition: .3s ease;
+                    }
+
+                    &:hover {
+                        background: var(--hoverColor);
+                        color: var(--blackColor);
+
+                        .icon {
+                            color: var(--blackColor);
+                            transform: translateX(5px);
+                        }
+                    }
+                }
+
+                .forgotPassword {
+                    font-size: 13px;
+                    color: var(--blackColor);
+                    opacity: .7;
+                    text-align: center;
+
+                    a {
+                        text-decoration: underline;
+                        cursor: pointer;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dashboard {
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+
+    .dashboardContainer {
+        height: 95vh;
+        width: 95%;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 10px rgb(194, 194, 194);
+    }
+}
+
+/* Let ge in our Dashboard Component - Please note that this
+already developed and the link is in the description if you
+wanna see how to create/build it along. */
+
+// Media Quries
+
+
+@media screen and (max-width: 990px) {
+    .heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 918px) {
+    .heading {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+// These styles pasted are for the dasboard component so you
+// dont need to know them at this point, however you can watch the 
+// enrire video - link below ofcource.
+
+// Queries for the Login and Register components
+@media screen and (max-width: 662px) {
+
+    .loginPage,
+    .registerPage {
+        .container {
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+            padding: 1.5rem;
+
+            .videoDiv {
+                width: 100%;
+
+                .textDiv {
+                    .title {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        padding: 1rem;
+                    }
+                }
+
+                .footerDiv {
+                    .text {
+                        font-size: 12px;
+                    }
+
+                    .btn {
+                        padding: .4rem 1.5rem;
+                    }
+                }
+            }
+
+            .formDiv {
+                gap: 1rem;
+                transform: translateY(-.5rem);
+
+                .headerDiv {
+                    padding: 1rem 0;
+
+                    img {
+                        width: 40px;
+                    }
+
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+
+                .form {
+                    gap: .5rem;
+
+                    .inputDiv {
+                        .input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 678px) {
+
+    .loginPage,
+    .registerPage {
+        .container {
+            .videoDiv {
+                .textDiv {
+                    .title {
+                        font-size: 25px;
+                    }
+
+                    p {
+                        padding: 1rem;
+                    }
+                }
+
+                .footerDiv {
+                    .text {
+                        font-size: 12px;
+                    }
+
+                    .btn {
+                        padding: .8rem 1.5rem;
+                    }
+                }
+            }
+
+            .formDiv {
+                .headerDiv {
+                    padding: 1.5rem 0;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+
+                .form {
+                    .inputDiv {
+                        .input {
+                            width: 100%;
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 927px) {
+
+    .loginPage,
+    .registerPage {
+        .container {
+            width: 85%;
+        }
+    }
+}
+
+// Hide scrool bar
+::-webkit-scrollbar{
+    display: none;
+}

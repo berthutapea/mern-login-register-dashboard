@@ -1,0 +1,82 @@
+/* Colors adn Styles (Default) */
+:root {
+  --PrimaryColor: hsl(94, 59%, 35%);
+  --HoverColor: #bdf094;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.activitySection {
+  flex-basis: 50%;
+}
+.activitySection .heading {
+  width: 100%;
+  justify-content: space-between;
+}
+.activitySection .heading h1 {
+  font-size: var(--h2FontSize);
+  color: var(--blackColor);
+  font-weight: 700;
+}
+.activitySection .heading .btn {
+  border: 1px solid transparent;
+}
+.activitySection .heading .btn:hover {
+  border: 1px solid var(--PrimaryColor);
+}
+.activitySection .secContainer {
+  margin-top: 1rem;
+}
+.activitySection .secContainer .singleCustomer {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.activitySection .secContainer .singleCustomer img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px var(--itemCardColor);
+  margin-right: 1rem;
+}
+.activitySection .secContainer .singleCustomer .customerDetails {
+  flex: 1;
+}
+.activitySection .secContainer .singleCustomer .customerDetails .name {
+  font-size: var(--h3FontSize);
+  font-weight: 600;
+  color: var(--blackColor);
+  display: block;
+}
+.activitySection .secContainer .singleCustomer .customerDetails small {
+  font-weight: 500;
+  color: var(--textColor);
+  font-size: var(--smallFontSize);
+}
+.activitySection .secContainer .singleCustomer .duration {
+  color: var(--textColor);
+  font-weight: 500;
+  font-size: var(--smallestFontSize);
+}
+
+@media screen and (max-width: 918px) {
+  .activitySection {
+    width: 100%;
+  }
+}/*# sourceMappingURL=activity.css.map */
