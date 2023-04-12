@@ -2,14 +2,11 @@ import './App.css';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
-
-//import React Router Dom
 import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom';
 
-// Lets create a router
 const router = createBrowserRouter([
   {
     path: '/',
