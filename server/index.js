@@ -23,13 +23,12 @@ const db = mysql.createConnection({
 // let us now create a route to the server that will register a user
 
 app.post('/register', (req, res) => {
-    // We need to get variables sent form the form
     const sentEmail = req.body.Email
     const sentUserName = req.body.UserName
     const sentPassword = req.body.Password
 
     // Lets create SQL statement to insert the user to the Database table Users
-    const SQL = 'INSERT INTO users (email, username, password) VALUES (?,?,?)'//We are going to enter these values thorough a variable
+    const SQL = 'INSERT INTO users (email, username, password) VALUES (?,?,?)'
     const Values = [sentEmail, sentUserName, sentPassword]
 
     // Query to execute the sql statement stated above
@@ -40,22 +39,17 @@ app.post('/register', (req, res) => {
         else {
             console.log('User inserted successfully!');
             res.send({ message: 'User added!' })
-            // Let try and see
-            // user has not been submitted, we need to use Express and cors
-            // Seuccesfull
         }
     })
 })
 
-// Now we need to login with these credentials from a registered User
-// Lets create another route
+
 app.post('/login', (req, res) => {
-    // We need to get variables sent form the form
     const sentloginUserName = req.body.LoginUserName
     const sentLoginPassword = req.body.LoginPassword
 
     // Lets create SQL statement to insert the user to the Database table Users
-    const SQL = 'SELECT * FROM users WHERE username = ? && password = ?'//We are going to enter these values thorough a variable
+    const SQL = 'SELECT * FROM users WHERE username = ? && password = ?'
     const Values = [sentloginUserName, sentLoginPassword]
 
         // Query to execute the sql statement stated above
@@ -68,7 +62,6 @@ app.post('/login', (req, res) => {
             }
             else{
                 res.send({message: `Credentials Don't match!`})
-                // This should be good, Lets try login.
             }
         })
 })
