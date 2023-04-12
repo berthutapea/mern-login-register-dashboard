@@ -63,7 +63,7 @@ video {
 }
 
 .message {
-    display: none; //we shall how all this come to use, be pateint 
+    display: none; 
 }
 
 .showMessage {
@@ -311,12 +311,7 @@ video {
     }
 }
 
-/* Let ge in our Dashboard Component - Please note that this
-already developed and the link is in the description if you
-wanna see how to create/build it along. */
-
 // Media Quries
-
 
 @media screen and (max-width: 990px) {
     .heading {
@@ -341,10 +336,6 @@ wanna see how to create/build it along. */
         gap: 1rem;
     }
 }
-
-// These styles pasted are for the dasboard component so you
-// dont need to know them at this point, however you can watch the 
-// enrire video - link below ofcource.
 
 // Queries for the Login and Register components
 @media screen and (max-width: 662px) {
