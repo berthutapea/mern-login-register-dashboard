@@ -1,10 +1,6 @@
 import React from 'react'
 import './sidebar.css'
-
-// Import Images
 import logo from '../../../Assets/logo.png'
-
-// Imported Icons 
 import { IoMdSpeedometer } from 'react-icons/io'
 import { MdDeliveryDining, MdOutlineExplore, MdOutlinePermContactCalendar } from 'react-icons/md'
 import { BsTrophy, BsCreditCard2Front, BsQuestionCircle } from 'react-icons/bs'
@@ -117,12 +113,6 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-
-      {/* <div className="buttonLogout">
-        <Link to={'/'}>
-          <button className="btn flex">Log Out<AiOutlineSwapRight className="icon" /></button>
-        </Link>
-      </div> */}
 
       <div className="sideBarCard">
         <BsQuestionCircle className="icon" />
