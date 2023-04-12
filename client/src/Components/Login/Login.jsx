@@ -3,12 +3,8 @@ import './Login.css';
 import '../../App.css'
 import { Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios'
-
-// Import our assets
 import video from '../../Assets/video.mp4'
 import logo from '../../Assets/logo.png'
-
-//Import Icons
 import { FaUserShield } from 'react-icons/fa'
 import { BsFillShieldLockFill } from 'react-icons/bs'
 import { AiOutlineSwapRight } from 'react-icons/ai'
@@ -16,51 +12,38 @@ import { AiOutlineSwapRight } from 'react-icons/ai'
 
 
 const Login = () => {
-
-
-    // UseState Hook to store inputs
     const [loginUserName, setLoginUserName] = useState('');
     const [loginPassword, setLoginPassword] = useState('');
     const navigateTo = useNavigate();
-
-    // Let us now show the message to the user
     const [loginStatus, setLoginStatus] = useState('');
     const [statusHolder, setStatusHolder] = useState('message');
 
-    // Onclick let us get what the user has entered
     const loginUser = (e) => {
-        // Lets prevent submitting
         e.preventDefault();
-        // we shall require Axios to create an API that connents to the server - Lets install that
         Axios.post('http://localhost:3002/login', {
-            // create variable to send to the server through the route
             LoginUserName: loginUserName,
             LoginPassword: loginPassword
         }).then((response) => {
             console.log();
-            // I want to catch the response first - We have data successfully from
-            // the database and we can catch an error if the credentails are wrong.
             if (response.data.message || loginUserName == '' || loginPassword ==  '') {
-                // if creditial dont match
-                navigateTo('/') //so we shall navigate to the same login page
+                navigateTo('/') 
                 setLoginStatus(`Credentials Don't Exist!`)
             }
             else {
-                navigateTo('/dashboard') //if the credentials match we shall navigate to the dashboard
+                navigateTo('/dashboard')
             }
         })
     }
 
     useEffect(() => {
         if (loginStatus !== '') {
-            setStatusHolder('showMessage') //show message
+            setStatusHolder('showMessage') 
             setTimeout(() => {
-                setStatusHolder('message') //hide it after 4s
+                setStatusHolder('message')
             }, 2000);
         }
     }, [loginStatus])
 
-    // Lets clear the form on submit
     const onSubmit = () => {
         setLoginUserName('')
         setLoginPassword('')
