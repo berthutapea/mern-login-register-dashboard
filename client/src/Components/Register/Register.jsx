@@ -3,12 +3,8 @@ import './Register.css';
 import '../../App.css'
 import { Link, useNavigate} from 'react-router-dom';
 import Axios from 'axios'
-
-// Import our assets
 import video from '../../Assets/video.mp4'
 import logo from '../../Assets/logo.png'
-
-//Import Icons
 import { FaUserShield } from 'react-icons/fa'
 import { BsFillShieldLockFill } from 'react-icons/bs'
 import { AiOutlineSwapRight } from 'react-icons/ai'
@@ -17,26 +13,19 @@ import { MdMarkEmailRead } from 'react-icons/md'
 
 
 const Register = () => {
-    // UseState to hold our inputs
     const [email, setEmail] = useState('')
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const navigateTo = useNavigate();
 
-    // Onclick let us get what the user has entered
     const createUser = (e) => {
         e.preventDefault()
-        // we shall require Axios to create an API that connents to the server - Lets install that
         Axios.post('http://localhost:3002/register', {
-            // create variable to send to the server through the route
             Email: email,
             UserName: userName,
             Password: password
         }).then(() => {
-            //  On register let us redict the user to the login page
             navigateTo('/');
-
-            // Let us clear the fields too
             setEmail('');
             setUserName('');
             setPassword('');
