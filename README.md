@@ -36,7 +36,6 @@ In the second terminal
 - Create your MySQL database, which you will use as your database
 - Supply the following credentials
 
-
 ```
 # --- Terminal ---
 
@@ -69,7 +68,6 @@ This project was created using the following technologies.
 
 
 ####  Backend 
-
 
 - [Node js](https://nodejs.org/en/) -A runtime environment to help build fast server applications using JS
 - [Express js](https://www.npmjs.com/package/express) -The server for handling and routing HTTP requests
