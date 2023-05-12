@@ -9,10 +9,9 @@ Fullstack open source login & register dashboard application made with MySql, Ex
       - [Frontend](#frontend)
       - [Backend](#backend)
       - [Database](#database)
-  <!-- * [📸 Screenshots](#screenshots) -->
+  * [📸 Screenshots](#screenshots)
   * [Author](#author)
   * [License](#license)
-
 
 
 ## Configuration and Setup
