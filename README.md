@@ -86,9 +86,9 @@ This project was created using the following technologies.
 ![img-3](https://github.com/berthutapea/mern-login-register-dashboard/assets/111676859/6f6051df-6738-4f53-a977-4955825dbf11)
 ## Author
 - Portfolio: [berthutapea](https://berthutapea.vercel.app/)
-- Github: [@bert-hutapea](https://github.com/berthutapea)
-- Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/gilberthutapea/)
+- Github: [berthutapea](https://github.com/berthutapea)
 - Sponsor: [berthutapea](https://saweria.co/berthutapea)
+- Linkedin: [gilberthutapea](https://www.linkedin.com/in/gilberthutapea/)
 - Email: [berthutapea@gmail.com](mailto:berthutapea@gmail.com)
 
 ## License
